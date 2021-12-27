@@ -32,7 +32,7 @@ public class HealthCare
         System.out.print("Height (in cms): ");
         height = sc.nextInt();
         System.out.println("In order to start, Enter the no. of operation and press the Enter key: \n1.Life Expectancy Calculator(Beta)");
-        System.out.println("2. Cholestrol Risk Meter \n3.Diabetic Risk Meter \n4.Body-Mass Index Calculator \n0. Exit");
+        System.out.println("2. Cholesterol Risk Meter \n3.Diabetic Risk Meter \n4.Body-Mass Index Calculator \n0. Exit");
         System.out.print("HcExpert@User_"+UserTag+">>>");
         int choice = sc.nextInt();
         if (choice==0){
@@ -56,7 +56,7 @@ public class HealthCare
         else if(choice == 2)
         {
             System.out.println();
-            cholestrol.cholestrol(); 
+            Cholesterol.cholesterol(); 
         }
         else if(choice == 3)
         {
@@ -90,11 +90,11 @@ class BMI extends HealthCare
         }
         if(bmi >=18.5 && bmi<=24.9)
         {
-            System.out.println("Your BMI is normal and you currently have: minimal health risks.");
+            System.out.println("Your BMI is normal and you currently have: /u2713 Congratulations! You have been diagnosed with minimal cholesterol risks..");
         }
         else if(bmi<18.5)
         {
-            System.out.println("Your BMI states you are underweight and you currently have: minimal health risks.");
+            System.out.println("Your BMI states you are underweight and you currently have: /u2713 Congratulations! You have been diagnosed with minimal cholesterol risks..");
         }
         else if(bmi>24.9 && bmi<=29.9)
         {
@@ -108,12 +108,13 @@ class BMI extends HealthCare
         {
             System.out.println("Your BMI states you are severly obese and you currently have: Extremely high health risks.");
         }
+        EndPrompt.End_XD();
     }
 }
 
-class cholestrol extends HealthCare
+class Cholesterol extends HealthCare
 {
-    public static void cholestrol() throws InterruptedException
+    public static void cholesterol() throws InterruptedException
     {
         Scanner sc = new Scanner(System.in);
         HealthCare hce = new HealthCare();
@@ -177,8 +178,89 @@ class cholestrol extends HealthCare
             Thread.sleep(20);
         }
         System.out.print("]______[100%]");
-        
+        if(carbs >= 225 && carbs <=325)
+        {if(fats >=44 && fats <=77)
+         {
+          if(proteins <= (avgproteins+10) && proteins >= (avgproteins-10) )
+          System.out.println("/u2713 Congratulations! You have been diagnosed with minimal cholesterol risks.");
+          else if(proteins < (avgproteins+10) )
+          System.out.println("/u2713 Congratulations! You have been diagnosed with minimal cholesterol risks.");
+          else
+          System.out.println("Results: You have been diagnosed with increased cholesterol risks. Kindly improve your diet.");
+         }
+         else if(fats < 44)
+         {if(proteins <= (avgproteins+10) && proteins >= (avgproteins-10) )
+          System.out.println("/u2713 Congratulations! You have been diagnosed with minimal cholesterol risks.");
+          else if(proteins < (avgproteins-10) )
+          System.out.println("/u2713 Congratulations! You have been diagnosed with minimal cholesterol risks.");
+          else
+          System.out.println("Results: You have been diagnosed with increased cholesterol risks. Kindly improve your diet.");
+         }
+         else
+         {if(proteins <= (avgproteins+10) && proteins >= (avgproteins-10) )
+          System.out.println("Results: You have been diagnosed with high cholesterol risks. Kindly improve your diet quality.");
+          else if(proteins < (avgproteins-10) )
+          System.out.println("Results: You have been diagnosed with high cholesterol risks. Kindly improve your diet quality.");
+          else
+          System.out.println("/u2713 Congratulations! You have been diagnosed with minimal cholesterol risks.");
+         }
+        }
+        else if(carbs < 225)
+        {
+         if(fats >=44 && fats <=77)
+         {if(proteins <= (avgproteins+10) && proteins >= (avgproteins-10) )
+          System.out.println("/u2713 Congratulations! You have been diagnosed with minimal cholesterol risks.");
+          else if(proteins < (avgproteins-10) )
+          System.out.println("/u2713 Congratulations! You have been diagnosed with minimal cholesterol risks.");
+          else
+          System.out.println("Results: You have been diagnosed with increased cholesterol risks. Kindly improve your diet.");
+         }
+         else if(fats < 44)
+         {if(proteins <= (avgproteins+10) && proteins >= (avgproteins-10) )
+          System.out.println("/u2713 Congratulations! You have been diagnosed with minimal cholesterol risks.");
+          else if(proteins < (avgproteins-10) )
+          System.out.println("/u2713 Congratulations! You have been diagnosed with minimal cholesterol risks.");
+          else
+          System.out.println("Results: You have been diagnosed with increased cholesterol risks. Kindly improve your diet.");
+         }
+         else
+         {if(proteins <= (avgproteins+10) && proteins >= (avgproteins-10) )
+          System.out.println("Results: You have been diagnosed with high cholesterol risks. Kindly improve your diet quality.");
+          else if(proteins < (avgproteins-10) )
+          System.out.println("Results: You have been diagnosed with high cholesterol risks. Kindly improve your diet quality.");
+          else
+          System.out.println("Results: You have been diagnosed with high cholesterol risks. Kindly improve your diet quality.");
+         }
+        }
+        else
+        {
+         if(fats >=44 && fats <=77)
+         {if(proteins <= (avgproteins+10) && proteins >= (avgproteins-10) )
+          System.out.println("Results: You have been diagnosed with increased cholesterol risks. Kindly improve your diet.");
+          else if(proteins < (avgproteins-10) )
+          System.out.println("Results: You have been diagnosed with increased cholesterol risks. Kindly improve your diet.");
+          else
+          System.out.println("Results: You have been diagnosed with increased cholesterol risks. Kindly improve your diet.");
+         }
+         else if(fats < 44)
+         {if(proteins <= (avgproteins+10) && proteins >= (avgproteins-10) )
+          System.out.println("/u2713 Congratulations! You have been diagnosed with minimal cholesterol risks., But you are advised to check your Sugar levels");
+          else if(proteins < (avgproteins-10) )
+          System.out.println("Results: You have been diagnosed with increased cholesterol risks. Kindly improve your diet.");
+          else
+          System.out.println("Results: You have been diagnosed with increased cholesterol risks. Kindly improve your diet.");
+         }
+         else
+         {if(proteins <= (avgproteins+10) && proteins >= (avgproteins-10) )
+          System.out.println("Results: You have been diagnosed with high cholesterol risks. Kindly improve your diet quality.");
+          else if(proteins < (avgproteins-10) )
+          System.out.println("Results: You have been diagnosed with Extremely High cholesterol risks. Kindly get checked by a physician.");
+          else
+          System.out.println("Results: You have been diagnosed with Extremely High cholesterol risks. Kindly get checked by a physician.");
+         }
     }
+    EndPrompt.End_XD();
+}
 }
 class _Sugar extends HealthCare
 {
@@ -188,7 +270,7 @@ class _Sugar extends HealthCare
         System.out.print("Enter your daily average Sugar-containing food intake(in grams): " );
         double sug = cs.nextDouble();
         System.out.println("In what form do you consume the most sugar on a weekly basis? \nChoose one of the options:");
-        System.out.print("1.Sweets \n2.Chocolates \n3.Cakes and Pastries \n4.Drinks, like Milkshakes \nUser@HCExpert>>> ");
+        System.out.print("1.Sweets \n2.Chocolates \n3.Cakes and Pastries \n4.Drinks, like Milkshakes \nHcExpert@User_"+UserTag+">>> ");
         int c3=cs.nextInt();
         BMI bodymass = new BMI();
         int k=200;int i;
@@ -212,7 +294,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug < 35)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:");
                     System.out.println("Increase Sugar intake by: "+" "+(35-sug)+"g");
                 }
                 else if(sug>42)
@@ -229,7 +311,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<35)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(35-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(35-sug)+"g");
                 }
                 else if(sug>42)
                 {
@@ -245,7 +327,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<35)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(35-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(35-sug)+"g");
                 }
                 else if(sug>42)
                 {
@@ -261,7 +343,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<35)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(35-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(35-sug)+"g");
                 }
                 else if(sug>42)
                 {
@@ -285,7 +367,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<32)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(32-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(32-sug)+"g");
                 }
                 else if(sug>38)
                 {
@@ -301,7 +383,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<32)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(32-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(32-sug)+"g");
                 }
                 else if(sug>38)
                 {
@@ -317,7 +399,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<32)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(32-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(32-sug)+"g");
                 }
                 else if(sug>38)
                 {
@@ -333,7 +415,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<32)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(32-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(32-sug)+"g");
                 }
                 else if(sug>38)
                 {
@@ -357,7 +439,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<29)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(29-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(29-sug)+"g");
                 }
                 else if(sug>34)
                 {
@@ -373,7 +455,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<29)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(29-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(29-sug)+"g");
                 }
                 else if(sug>34)
                 {
@@ -389,7 +471,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<27)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(27-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(27-sug)+"g");
                 }
                 else if(sug>34)
                 {
@@ -405,7 +487,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<27)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(27-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(27-sug)+"g");
                 }
                 else if(sug>34)
                 {
@@ -429,7 +511,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<23)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
                 }
                 else if(sug>30)
                 {
@@ -445,7 +527,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<23)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
                 }
                 else if(sug>30)
                 {
@@ -461,7 +543,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<23)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
                 }
                 else if(sug>30)
                 {
@@ -477,7 +559,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<23)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
                 }
                 else if(sug>30)
                 {
@@ -501,7 +583,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<17)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
                 }
                 else if(sug>22)
                 {
@@ -517,7 +599,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<17)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
                 }
                 else if(sug>22)
                 {
@@ -533,7 +615,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<17)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
                 }
                 else if(sug>22)
                 {
@@ -549,7 +631,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<17)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
                 }
                 else if(sug>22)
                 {
@@ -576,7 +658,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<22)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(22-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(22-sug)+"g");
                 }
                 else if(sug>29)
                 {
@@ -592,7 +674,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<22)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(22-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(22-sug)+"g");
                 }
                 else if(sug>29)
                 {
@@ -608,7 +690,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<22)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(22-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(22-sug)+"g");
                 }
                 else if(sug>29)
                 {
@@ -624,7 +706,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<22)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(22-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(22-sug)+"g");
                 }
                 else if(sug>29)
                 {
@@ -648,7 +730,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<23)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
                 }
                 else if(sug>32)
                 {
@@ -664,7 +746,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<23)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
                 }
                 else if(sug>32)
                 {
@@ -680,7 +762,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<23)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
                 }
                 else if(sug>32)
                 {
@@ -696,7 +778,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<23)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(23-sug)+"g");
                 }
                 else if(sug>32)
                 {
@@ -720,7 +802,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<20)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(20-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(20-sug)+"g");
                 }
                 else if(sug>27)
                 {
@@ -736,7 +818,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<20)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(20-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(20-sug)+"g");
                 }
                 else if(sug>27)
                 {
@@ -752,7 +834,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<20)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(20-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(20-sug)+"g");
                 }
                 else if(sug>27)
                 {
@@ -768,7 +850,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<20)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(20-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(20-sug)+"g");
                 }
                 else if(sug>27)
                 {
@@ -792,7 +874,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<17)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
                 }
                 else if(sug>24)
                 {
@@ -808,7 +890,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<17)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
                 }
                 else if(sug>24)
                 {
@@ -824,7 +906,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<17)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
                 }
                 else if(sug>24)
                 {
@@ -840,7 +922,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<17)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(17-sug)+"g");
                 }
                 else if(sug>24)
                 {
@@ -864,7 +946,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<13)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(13-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(13-sug)+"g");
                 }
                 else if(sug>22)
                 {
@@ -880,7 +962,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<13)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(13-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(13-sug)+"g");
                 }
                 else if(sug>22)
                 {
@@ -896,7 +978,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<13)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(13-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(13-sug)+"g");
                 }
                 else if(sug>22)
                 {
@@ -912,7 +994,7 @@ class _Sugar extends HealthCare
                 }
                 else if(sug<13)
                 {
-                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. Congratulations! You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(13-sug)+"g");
+                    System.out.println("\u2713 SUGAR TEST >>> Low Sugar Diet. You currently have minimal diabetic risks. \n**Tip to move towards a healthy diet:  \nIncrease Sugar intake by: "+" "+(13-sug)+"g");
                 }
                 else if(sug>22)
                 {
@@ -969,7 +1051,7 @@ class Que1 extends Life_Exp
         System.out.println("\n1. Family member lived up to the age of 70 years with no heart-related problems before age 55.");
         System.out.println("2. Heart-related issues of a family member before age 55.");
         System.out.println("3. Don't know.");
-        System.out.print("Prompt");
+        System.out.print("HcExpert@User_"+UserTag+">>>");
         int cfirst = sc.nextInt();
         if(cfirst==1)
         avglifeexp = avglifeexp+2;
@@ -999,7 +1081,7 @@ class Que2 extends Life_Exp
         System.out.println("2. High blood pressure, on medication and under control.");
         System.out.println("3. High blood pressure, not under control.");
         System.out.println("4. Don't know Blood Pressure.");
-        System.out.print("Prompt");
+        System.out.print("HcExpert@User_"+UserTag+">>>");
         int csecond = sc.nextInt();
         if(csecond==1)
         avglifeexp = avglifeexp+3;
@@ -1030,7 +1112,7 @@ class Que3 extends Life_Exp
         System.out.println("1. Stress is a positive influence.");
         System.out.println("2. I've had my shares of ups and downs");
         System.out.println("3. Stress is a overwhelming influence.");
-        System.out.print("Prompt");
+        System.out.print("HcExpert@User_"+UserTag+">>>");
         int cthird = sc.nextInt();
         if(cthird==1)
         avglifeexp = avglifeexp+1;
@@ -1060,7 +1142,7 @@ class Que4 extends Life_Exp
         System.out.println("2. Go for a walk for around 30 minutes 4 times a week.");
         System.out.println("3. Somewhat active.");
         System.out.println("4. Not active at all.");
-        System.out.print("Prompt");
+        System.out.print("HcExpert@User_"+UserTag+">>>");
         int cfourth = sc.nextInt();
         if(cfourth==1)
         avglifeexp = avglifeexp+3;
@@ -1087,12 +1169,12 @@ class Que5 extends Life_Exp
     {
         Scanner sc= new Scanner(System.in);
         System.out.println("A good diet has all the advantages of a active lifestyle with good functioning of the digestive system, strengthening of bones,muscles and immunity, making diet a factor to determine life expectancy.");
-        System.out.println("While meat and oil contribute to cholestrol and heart disease, vegetables, fruits and cereals don't contain cholesterol or saturated fats, and have cancer and heart disease-fighting nutrients.");
+        System.out.println("While meat and oil contribute to cholesterol and heart disease, vegetables, fruits and cereals don't contain cholesterol or saturated fats, and have cancer and heart disease-fighting nutrients.");
         System.out.println("Don't feel embarrassed and answer which one of these best determines your eating habits?");
         System.out.println("1. Eat more than 5 portions of fruits and vegetables.");
         System.out.println("2. Average amount of fruits and vegetables and minimal amount of oily and spicy fast foods.");
         System.out.println("3. Eat fast or processed on a daily basis and minimal amount of fruits and vegetables.");
-        System.out.print("Prompt");
+        System.out.print("HcExpert@User_"+UserTag+">>>");
         int cfifth = sc.nextInt();
         if(cfifth==1)
         avglifeexp = avglifeexp+3;
@@ -1124,7 +1206,7 @@ class Que6 extends Life_Exp
         System.out.println("4. Convicted of driving for being intoxicated.");
         System.out.println("5. Convicted more than 1 times of driving for being intoxicated.");
         System.out.println("6. Don't drive or travel much.");
-        System.out.print("Prompt");
+        System.out.print("HcExpert@User_"+UserTag+">>>");
         int csixth = sc.nextInt();
         if(csixth==1)
         avglifeexp = avglifeexp+1;
@@ -1175,7 +1257,7 @@ class Que7 extends Life_Exp
             System.out.println("Don't drink or never more than 1-2 drinks per day.");
             System.out.println("3-4 drinks for more than 2 times a week.");
             System.out.println("5 or more drinks at one time for more than twice a month.");
-            System.out.print("Prompt");
+            System.out.print("HcExpert@User_"+UserTag+">>>");
             int cseventh = sc.nextInt();
         if(cseventh==1)
         avglifeexp = avglifeexp+1;
@@ -1221,7 +1303,7 @@ class Que8 extends Life_Exp
         System.out.println("3. Quit less than 2 years ago.");
         System.out.println("4. Smoke less than 2 packs per day.");
         System.out.println("5. Smoke more than 2 packs per day.");
-        System.out.print("Prompt");
+        System.out.print("HcExpert@User_"+UserTag+">>>");
         int ceighth = sc.nextInt();
         if(ceighth==1)
         avglifeexp = avglifeexp+2;
@@ -1281,7 +1363,7 @@ class Que9 extends Life_Exp
         System.out.println("1. Regularly schedule checkups at the physician");
         System.out.println("2. Go to the doctor only when i feel ill.");
         System.out.println("3. Visit a doctor in cases of severe inconvenience/ Not visit a doctor at all.");
-        System.out.print("Prompt");
+        System.out.print("HcExpert@User_"+UserTag+">>>");
         int cninth= sc.nextInt();
         if(cninth==1)
         avglifeexp = avglifeexp+1;
@@ -1311,7 +1393,7 @@ class Que10 extends Life_Exp
         System.out.println("2. A meaningful life is possible in a purely physical world devoid of finite and infinite spiritual realities.");
         System.out.println("3. Life can be robustly meaningful even if there is no God, after-life, or transcendent realm.");
         System.out.println("4. All values are baseless and that nothing can be known or communicated.");
-        System.out.print("Prompt");
+        System.out.print("HcExpert@User_"+UserTag+">>>");
         int ctenth= sc.nextInt();
         if(ctenth==1)
         {
@@ -1368,7 +1450,7 @@ class EndPrompt extends HealthCare
     {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter your choice: \n1.Go back to homepage. \n0.Exit");
-        System.out.print("Prompt");
+        System.out.print("HcExpert@User_"+UserTag+">>>");
         int ch1000000 = sc.nextInt();
         if(ch1000000 == 1)
         {
