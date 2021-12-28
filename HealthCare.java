@@ -6,7 +6,7 @@ public class HealthCare
     public static double height;
     public static int age;
     public static int UserTag = ((int)(Math.random()*(999999-100000+1)+100000));
-    public static void Welcome() 
+    public static void Start()
     {
         System.out.println("        _   _            _ _   _      ____");
         System.out.println("       | | | | ___  __ _| | |_| |__  / ___|__ _ _ __ ___");
@@ -20,13 +20,16 @@ public class HealthCare
         System.out.println("                | |___ >  <| |_) |  __/ |  | |_");
         System.out.println("                |_____/_/\\_\\ .__/ \\___|_|   \\__|");
         System.out.println("                           |_|");
-        System.out.println();
         System.out.println("Welcome to Your Personal HealthCare Expert!!!");
         System.out.println("*_1. This program is not an actual calculator but a mere prediction of one's health status based on inputted diet information*");
         System.out.println("*_2. It is advised to enter all values accurately to get the best results.*");
         System.out.println("*_3. This program is developed from information from the web. Every output is a resultant of the information available on the web.");
-        System.out.println("*_4. The program is open-source and can be found on https:/github.com/...");    
+        System.out.println("*_4. The program is open-source and can be found on https://github.com/Simpliciti/HealthCareExpert.git");    
         System.out.println("Enter the following details accurately. Some of these details will be used by the functions of the program. \nAccurate details will result in the best results.");
+        Welcome();
+    }
+    private static void Welcome() 
+    {
         Scanner sc=new Scanner(System.in);
         System.out.print("Please input your Age: ");
         age = sc.nextInt();
@@ -101,8 +104,8 @@ class BMI extends HealthCare
     public static float bmi = (float)((weight/(height*height))*10000);
     public static void bmindex() 
     {
-        System.out.println("Your Body-Mass-Index is: "+bmi+"\nBody Mass Index plays a role in calculating any kind of health risk.");
-        System.out.println("Getting the result...\n");
+        System.out.println("Your Body-Mass-Index is: "+bmi+".\nBody Mass Index plays a vital role in calculating any kind of health risk.");
+        System.out.print("Getting the result...");
         int i;double mn=1;
         double f=1000000000;
         for(i=5;i>0;i--)
@@ -120,15 +123,15 @@ class BMI extends HealthCare
         }
         if(bmi >=18.5 && bmi<=24.9)
         {
-            System.out.println("Your BMI is normal and you currently have: /u2713 Congratulations! You have been diagnosed with minimal cholesterol risks..");
+            System.out.println("Your BMI is normal and you currently have: Minimal health risks..");
         }
         else if(bmi<18.5)
         {
-            System.out.println("Your BMI states you are underweight and you currently have: /u2713 Congratulations! You have been diagnosed with minimal cholesterol risks..");
+            System.out.println("Your BMI states you are underweight and you currently have: Minimal health risks..");
         }
         else if(bmi>24.9 && bmi<=29.9)
         {
-            System.out.println("Your BMI states you are overweight and you have: increased health risks.");
+            System.out.println("Your BMI states you are overweight and you have: Increased health risks.");
         }
         else if(bmi>30.0 && bmi<=34.9)
         {
@@ -212,11 +215,11 @@ class Cholesterol extends HealthCare
         }
         else if(fats<44)
         {
-            System.out.println("\u2713 TEST 3=> Low fat diet.**Tip to move towards a healthy diet:  \nIncrease fat intake by: "+(44-fats)+"g");
+            System.out.println("\u2713 TEST 3=> Low fat diet.**Tip to move towards a healthy diet:  Increase fat intake by: "+(44-fats)+"g");
         }
         else if(fats>77)
         {
-            System.out.println("\u2713 TEST 3=> High fat diet.**Tip to move towards a healthy diet:  \nDecrease fat intake by: "+(fats-77)+"g");
+            System.out.println("\u2713 TEST 3=> High fat diet.**Tip to move towards a healthy diet:  Decrease fat intake by: "+(fats-77)+"g");
         }
         mn=1;
         f=30000000;
@@ -229,7 +232,7 @@ class Cholesterol extends HealthCare
         {
             System.out.print("=");
             mn=1;
-            f=30000000;
+            f=10000000;
             while(mn<=f)
             {
                 mn+=1;
@@ -318,6 +321,7 @@ class Cholesterol extends HealthCare
           System.out.println("Results: You have been diagnosed with Extremely High cholesterol risks. Kindly get checked by a physician.");
          }
         }
+        System.out.println("**_ This feature is based off of information from the web. Estimations of high accuracy are required for this feature to give correct results. The results will be false if the estimation varies for more than 8-10 grams.");
         System.out.println();
         EndPrompt.End_XD();
     }
@@ -333,7 +337,7 @@ class _Sugar extends HealthCare
         System.out.print("1.Sweets \n2.Chocolates \n3.Cakes and Pastries \n4.Drinks, like Milkshakes \nHcExpert@User_"+UserTag+">>> ");
         int c3=cs.nextInt();
         BMI bodymass = new BMI();
-        System.out.println("Getting the results...\n");
+        System.out.print("Getting the results...");
         int i;double mn=1;
         double f=1000000000;
         for(i=5;i>0;i--)
@@ -1532,24 +1536,35 @@ class Que10 extends Life_Exp
         System.out.print("HcExpert@User_"+UserTag+">>>");
         System.out.println();System.out.println();
         int ctenth= sc.nextInt();
+        System.out.println();
+        int i;double mn=1;
+        double f=1000000000;
+        while(mn<=f)
+        {
+                mn+=1;
+        }
         if(ctenth==1)
         {
-            System.out.println("Your belief is called Supernaturalism. Supernaturalism maintains that God’s existence, along with “appropriately relating” to God, is necessary and \nsufficient for securing a meaningful life, although accounts diverge on the specifics. People with such views are known have a strong will to live and have an increased life expectancy, the cause of which is still unknown.");
+            System.out.println("*_Supernaturalism: ");
+            System.out.println("Your belief is called Supernaturalism. Supernaturalism maintains that God’s existence, along with “appropriately relating” to God, is necessary and \nsufficient for securing a meaningful life, although accounts diverge on the specifics. People with such views are known have a strong will to live \nand have an increased life expectancy, the cause of which is still unknown.");
             avglifeexp = avglifeexp+2;
         }
         else if(ctenth==2)
         {
-            System.out.println("Your belief is called Objective Naturalism. Objective naturalists claim that a meaningful life is a function of appropriately connecting with \nmind-independent realities of objective worth, and that are entirely natural. Such views are shown to increase life expctancy in some cases while decrease in others, but the cause to it has still not been found.");
+            System.out.println("*_Objective Naturalism: ");
+            System.out.println("Your belief is called Objective Naturalism. Objective naturalists claim that a meaningful life is a function of appropriately connecting with \nmind-independent realities of objective worth, and that are entirely natural. Such views are shown to increase life expctancy in some cases while decrease \nin others, but the cause to it has still not been found.");
             avglifeexp = avglifeexp+0;
         }
         else if(ctenth==3)
         {
-            System.out.println("Your belief is called Subjective Naturalism. According to subjective naturalism, what constitutes a meaningful life varies from person to person, and \nis a function of one getting what one strongly wants or by achieving self-established goals or through accomplishing what one believes to be really important. Having such views has shown results of high life expectancy though no proof exists.");
+            System.out.println("*_Subjective Naturalism: ");
+            System.out.println("Your belief is called Subjective Naturalism. According to subjective naturalism, what constitutes a meaningful life varies from person to person, and \nis a function of one getting what one strongly wants or by achieving self-established goals or through accomplishing what one believes to be really \nimportant. Having such views has shown results of high life expectancy though no proof exists.");
             avglifeexp = avglifeexp+1;
         }
         else if(ctenth==4)
         {
-            System.out.println("Your belief is called Nihilism. Nihilism is a philosophy, or family of views within philosophy, that rejects general or fundamental aspects of human \nexistence, such as objective truth, knowledge, morality, values or meaning. Though considered immoral, there are no studies that show its connection to life expectancy.");
+            System.out.println("*_Nihilism: ");
+            System.out.println("Your belief is called Nihilism. Nihilism is a philosophy, or family of views within philosophy, that rejects general or fundamental aspects of human \nexistence, such as objective truth, knowledge, morality, values or meaning. Though considered immoral, there are no studies that show its connection \nto life expectancy.");
             avglifeexp= avglifeexp+0;
         }
         else
@@ -1623,18 +1638,22 @@ class Ending extends HealthCare
 {
     public static void End()
     {
+        int i;double mn=1;
+        double f=1000000000;
         System.out.println();
         System.out.println("*_1. This program is not an actual calculator but a mere prediction of one's health status based on inputted diet information*");
         System.out.println("*_2. It is advised to enter all values accurately to get the best results.*");
         System.out.println("*_3. This program is developed from information from the web. Every output is a resultant of the information available on the web.");
-        System.out.println("*_4. The program is open-source and can be found on https:/github.com/...");
+        System.out.println("*_4. The program is open-source and can be found on https://github.com/Simpliciti/HealthCareExpert.git");
         System.out.println();
-        System.out.println("A special Thanks of gratitude from the developers for using HealthCare Expert!");
+        while(mn<=f)
+        {
+                mn+=1;
+        }
+        System.out.println("A special thanks of gratitude from the developers for using HealthCare Expert!");
         System.out.println("Don't take any negative results seriously. The devs wish you a long and prosperous life ahead of you.");
         System.out.println("Postscript ~~ This program is part of a school project, created by the collaboration of 4 classmates.");
         System.out.println("CREDITS: \n       Kunwar Utkarsh \n       Raunak Raj Gupta \n       Pragyan Singh \n       Yashraj Singh");
-        int i;double mn=1;
-        double f=1000000000;
         while(mn<=f)
         {
                 mn+=1;
