@@ -1545,26 +1545,18 @@ class Que10 extends Life_Exp
         }
         if(ctenth==1)
         {
-            System.out.println("*_Supernaturalism: ");
-            System.out.println("Your belief is called Supernaturalism. Supernaturalism maintains that God’s existence, along with “appropriately relating” to God, is necessary and \nsufficient for securing a meaningful life, although accounts diverge on the specifics. People with such views are known have a strong will to live \nand have an increased life expectancy, the cause of which is still unknown.");
             avglifeexp = avglifeexp+2;
         }
         else if(ctenth==2)
         {
-            System.out.println("*_Objective Naturalism: ");
-            System.out.println("Your belief is called Objective Naturalism. Objective naturalists claim that a meaningful life is a function of appropriately connecting with \nmind-independent realities of objective worth, and that are entirely natural. Such views are shown to increase life expctancy in some cases while decrease \nin others, but the cause to it has still not been found.");
             avglifeexp = avglifeexp+0;
         }
         else if(ctenth==3)
         {
-            System.out.println("*_Subjective Naturalism: ");
-            System.out.println("Your belief is called Subjective Naturalism. According to subjective naturalism, what constitutes a meaningful life varies from person to person, and \nis a function of one getting what one strongly wants or by achieving self-established goals or through accomplishing what one believes to be really \nimportant. Having such views has shown results of high life expectancy though no proof exists.");
             avglifeexp = avglifeexp+1;
         }
         else if(ctenth==4)
         {
-            System.out.println("*_Nihilism: ");
-            System.out.println("Your belief is called Nihilism. Nihilism is a philosophy, or family of views within philosophy, that rejects general or fundamental aspects of human \nexistence, such as objective truth, knowledge, morality, values or meaning. Though considered immoral, there are no studies that show its connection \nto life expectancy.");
             avglifeexp= avglifeexp+0;
         }
         else
