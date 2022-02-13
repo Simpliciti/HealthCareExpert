@@ -20,9 +20,9 @@ Ensure you have a JDK installed version 11 or newer.
 3. Open Terminal in Linux or Command Prompt in Windows
 
 4. Compile code using 
-`javac HealthCareExpert.java`
+`javac HealthCare.java`
 
 5. Run the compiled file
-`java HealthCareExpert`
+`java HealthCare`
 
 Enjoy!
