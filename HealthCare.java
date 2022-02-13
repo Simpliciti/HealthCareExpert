@@ -1634,17 +1634,13 @@ class Ending extends HealthCare
         double f=1000000000;
         System.out.println();
         System.out.println("*_1. This program is not an actual calculator but a mere prediction of one's health status based on inputted diet information*");
-        System.out.println("*_2. It is advised to enter all values accurately to get the best results.*");
-        System.out.println("*_3. This program is developed from information from the web. Every output is a resultant of the information available on the web.");
-        System.out.println("*_4. The program is open-source and can be found on https://github.com/Simpliciti/HealthCareExpert.git");
+        System.out.println("*_3. This program is developed from information from the web. Every output is a resultant of the information available on the web.")
         System.out.println();
         while(mn<=f)
         {
                 mn+=1;
         }
-        System.out.println("A special thanks of gratitude from the developers for using HealthCare Expert!");
         System.out.println("Don't take any negative results seriously. The devs wish you a long and prosperous life ahead of you.");
-        System.out.println("Postscript ~~ This program is part of a school project, created by the collaboration of 4 classmates.");
         System.out.println("CREDITS: \n       Kunwar Utkarsh \n       Raunak Raj Gupta \n       Pragyan Singh \n       Yashraj Singh");
         while(mn<=f)
         {
